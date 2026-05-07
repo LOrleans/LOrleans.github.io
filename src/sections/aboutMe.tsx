@@ -1,10 +1,13 @@
 import { BrainCircuitIcon } from '../assets/icons';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function AboutMe() {
+    const { t } = useLanguage();
+
     const techCategories = [
-        { title: 'Front-end', techs: ['React', 'Next.js', 'TypeScript', 'Tailwind'] },
-        { title: 'Back-end', techs: ['Node.js', 'Python', 'Django', 'Firebase'] },
-        { title: 'Tools', techs: ['Git', 'Docker', 'Figma', 'Linux'] },
+        { title: t.techCategories.frontend, techs: ['React', 'Next.js', 'TypeScript', 'Tailwind'] },
+        { title: t.techCategories.backend, techs: ['Node.js', 'Python', 'Django', 'Firebase'] },
+        { title: t.techCategories.tools, techs: ['Git', 'Docker', 'Figma', 'Linux'] },
     ];
 
     return (
@@ -15,7 +18,7 @@ export default function AboutMe() {
                 <div className="h-[6px] w-full bg-[#3bbffa] rounded-full shadow-[0_0_20px_rgba(59,191,250,1)]"></div>
                 <h2 className="animate-shimmer text-5xl md:text-6xl lg:text-4xl font-black text-[#3bbffa] tracking-tighter whitespace-nowrap px-2 bg-clip-text text-transparent bg-linear-to-r from-[#3bbffa] via-white/80 via-50% to-[#3bbffa] bg-size-[200%_100%] drop-shadow-[0_0_10px_rgba(59,191,250,0.5)]"
                     style={{ filter: 'drop-shadow(0 0 12px rgba(59, 191, 250, 0.8))' }}>
-                    ABOUT ME
+                    {t.aboutMe.title}
                 </h2>
                 <div className="h-[6px] w-full bg-[#3bbffa] rounded-full shadow-[0_0_20px_rgba(59,191,250,1)]"></div>
             </div>
@@ -31,19 +34,19 @@ export default function AboutMe() {
                                 <BrainCircuitIcon className='w-16 h-16 lg:w-10 lg:h-10'/>
                             </div>
                             <h3 className="text-[#3bbffa] text-6xl md:text-5xl lg:text-3xl font-black leading-none">
-                                Personal Profile
+                                {t.aboutMe.profileTitle}
                             </h3>
                         </div>
 
                         <div className="space-y-12 lg:space-y-6 text-white">
                             <div className="relative">
                                 <p className="text-4xl md:text-4xl lg:text-xl leading-[1.3] font-medium">
-                                    Hello! I'm a <span className="text-[#3bbffa] underline decoration-4 underline-offset-8">Software Developer</span> passionate about tech.
+                                    {t.aboutMe.greeting}<span className="text-[#3bbffa] underline decoration-4 underline-offset-8">{t.aboutMe.role}</span>{t.aboutMe.greetingEnd}
                                 </p>
                             </div>
                             
                             <p className="text-[#f0f0f0] text-3xl md:text-3xl lg:text-lg pl-8 border-l-8 border-[#3bbffa] leading-relaxed py-2">
-                                I specialize in <span className="text-white font-bold">AI and Frontend Engineering</span>, building high-performance apps.
+                                {t.aboutMe.specialty}<span className="text-white font-bold">{t.aboutMe.specialtyHighlight}</span>{t.aboutMe.specialtyEnd}
                             </p>
                         </div>
 
@@ -67,7 +70,7 @@ export default function AboutMe() {
                             <div className="p-6 lg:p-3 rounded-3xl bg-white/10 border-2 border-[#3bbffa] text-[#3bbffa]">
                                 <code className="text-4xl lg:text-xl font-black">{"</>"}</code>
                             </div>
-                            <h3 className="text-[#3bbffa] text-5xl lg:text-2xl font-black">Tech Stack</h3>
+                            <h3 className="text-[#3bbffa] text-5xl lg:text-2xl font-black">{t.aboutMe.techStackTitle}</h3>
                         </div>
 
                         <div className="flex flex-col space-y-4">
