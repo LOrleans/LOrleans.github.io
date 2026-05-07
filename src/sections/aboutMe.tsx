@@ -16,7 +16,7 @@ export default function AboutMe() {
             {/* Título no mobile */}
             <div className="flex items-center gap-2 w-[80vw] mb-24 xl:mb-16 mt-10">
                 <div className="h-[6px] w-full bg-[#3bbffa] rounded-full shadow-[0_0_20px_rgba(59,191,250,1)]"></div>
-                <h2 className="animate-shimmer text-5xl md:text-6xl lg:text-4xl font-black text-[#3bbffa] tracking-tighter whitespace-nowrap px-2 bg-clip-text text-transparent bg-linear-to-r from-[#3bbffa] via-white/80 via-50% to-[#3bbffa] bg-size-[200%_100%] drop-shadow-[0_0_10px_rgba(59,191,250,0.5)]"
+                <h2 className="animate-shimmer text-5xl md:text-6xl lg:text-4xl font-black text-[#3bbffa] tracking-tighter whitespace-nowrap px-2 bg-clip-text bg-linear-to-r from-[#3bbffa] via-white/80 via-50% to-[#3bbffa] bg-size-[200%_100%] drop-shadow-[0_0_10px_rgba(59,191,250,0.5)]"
                     style={{ filter: 'drop-shadow(0 0 12px rgba(59, 191, 250, 0.8))' }}>
                     {t.aboutMe.title}
                 </h2>

@@ -17,8 +17,16 @@ export default function Hero() {
             <div className='absolute top-200 lg:top-150 xl:top-70 right-65 h-150 w-150 lg:h-120 lg:w-120 rounded-full bg-cyan-500/20 blur-[120px]'></div>
 
             {/* Conteúdo */}
-            <div className="max-w-7xl h-[40vh] text-left text-white flex flex-col lg:gap-6 xl:gap-8 justify-evenly items-center px-[8vw] xl:px-0">
-                <p className="text-[#3bbffa] text-3xl lg:text-2xl xl:text-lg">{t.hero.role}</p>
+            <div className="max-w-7xl h-[40vh] text-left text-white flex flex-col lg:gap-6 xl:gap-8 justify-evenly items-center px-[8vw] xl:px-0 mt-10 lg:mt-0">
+                <div className="flex flex-col items-center text-center gap-2">
+                    <h2 className="text-5xl md:text-6xl lg:text-5xl font-black text-white tracking-tight drop-shadow-lg">
+                        Lucas Orleans
+                    </h2>
+                    <div className="h-[2px] w-2/3 bg-linear-to-r from-transparent via-[#3bbffa] to-transparent opacity-70 mb-1"></div>
+                    <p className="text-[#3bbffa] text-2xl lg:text-xl xl:text-lg font-semibold tracking-[0.2em] uppercase">
+                        {t.hero.role}
+                    </p>
+                </div>
                 <h1 className="text-8xl lg:text-8xl xl:text-7xl text-center font-bold text-white">
                     {t.hero.titlePart1} <br />
                     <span className="animate-shimmer bg-clip-text text-transparent bg-linear-to-r from-[#3bbffa] via-white/80 via-50% to-[#3bbffa] bg-size-[200%_100%] drop-shadow-[0_0_10px_rgba(59,191,250,0.5)]">
